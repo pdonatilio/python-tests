@@ -7,13 +7,16 @@ class Perfil(object):
     self.nome = nome
     self.telefone = telefone
     self.empresa = empresa
-    self.curtidas = 0  
+    self.__curtidas = 0  
 
   def imprimir(self):
-    print 'Nome %s, Telefone %s, Empresa %s' % (self.nome, self.telefone, self.empresa)
+    print 'Nome %s, Telefone %s, Empresa %s, Curtidas %s' % (self.nome, self.telefone, self.empresa, self.obter_curtidas())
 
   def curtir(self):
-    self.curtidas+=1  
+    self.__curtidas+=1
+
+  def obter_curtidas(self):
+    return self.__curtidas
   
   
 #Exercícios do Módulo 8  
