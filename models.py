@@ -6,11 +6,17 @@ class Perfil(object):
   def __init__(self, nome, telefone, empresa):
     self.nome = nome
     self.telefone = telefone
-    self.empresa = empresa  
+    self.empresa = empresa
+    self.curtidas = 0  
 
   def imprimir(self):
     print 'Nome %s, Telefone %s, Empresa %s' % (self.nome, self.telefone, self.empresa)
 
+  def curtir(self):
+    self.curtidas+=1  
+  
+  
+#Exercícios do Módulo 8  
 class Data(object):
   'Classe para exibir uma data no sistema no padrão dia/mês/ano'
 
